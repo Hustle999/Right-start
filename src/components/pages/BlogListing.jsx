@@ -1,3 +1,5 @@
+import { SingleBlog } from "../blog-listing/SingleBlog";
+
 export default function BlogListing() {
-  return <div>BlogListing</div>;
+  return <SingleBlog />;
 }
