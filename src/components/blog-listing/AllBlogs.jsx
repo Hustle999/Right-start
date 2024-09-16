@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { ArticleCard } from "./ArticleCard";
+import { SingleBlogStyle } from "./SingleBlogStyle";
 
-export const SingleBlog = () => {
+export const AllBlogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   const fetchData = () => {
-    fetch("https://dev.to/api/articles")
+    fetch("https://dev.to/api/articles?top=10")
       .then((response) => response.json())
       .then((data) => setBlogs(data));
   };
@@ -14,9 +14,9 @@ export const SingleBlog = () => {
     console.log(blogs);
   }, []);
   return (
-    <div>
+    <div className="grid grid-cols-3 gap-[20px]">
       {blogs.map((blog) => {
-        return <ArticleCard blog={blog} />;
+        return <SingleBlogStyle blog={blog} />;
       })}
     </div>
   );

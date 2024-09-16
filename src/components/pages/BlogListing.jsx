@@ -1,5 +1,14 @@
-import { SingleBlog } from "../blog-listing/SingleBlog";
+import { AllBlogs } from "../blog-listing/AllBlogs";
+import { ContentBlogList } from "../blog-listing/ContentBlogList";
+import { Footer } from "../footer/Footer";
+import { Header } from "../header/Header";
 
 export default function BlogListing() {
-  return <SingleBlog />;
+  return (
+    <div>
+      <Header />
+      <ContentBlogList />
+      <Footer />
+    </div>
+  );
 }
