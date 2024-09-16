@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Blogo } from "./components/Blogo";
 
 export const Footer = () => {
@@ -21,9 +22,15 @@ export const Footer = () => {
         </div>
         {/* dund bosoo */}
         <div className="col-span-2 flex flex-col items-center">
-          <div>Home</div>
-          <div>Blog</div>
-          <div>Contact</div>
+          <Link href={"/"}>
+            <div>Home</div>
+          </Link>
+          <Link href={"/blog-list"}>
+            <div>Blog</div>
+          </Link>
+          <Link href={"/contact-us"}>
+            <div>Contact</div>
+          </Link>
         </div>
         {/* baruun bosoo */}
         <div>logo</div>
